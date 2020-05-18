@@ -16,7 +16,13 @@ namespace cw11.Models
 
         public ClinicDbContext(DbContextOptions options) : base(options)
         {
-            
+        }
+           protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<PrescriptionMedicament>()
+           .HasKey(e => new { e.IdMedicament, e.IdPrescription});
         }
 
     }

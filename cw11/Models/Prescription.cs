@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace cw11.Models
 {
+    [Table("Recepta")]
     public class Prescription
     {
         [Key]

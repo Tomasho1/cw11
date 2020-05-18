@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace cw11.Models
 {
+    [Table("Recepta_Lek")]
     public class PrescriptionMedicament
     {
         [Required]
-        [Key]
-        [ForeignKey("Medicament")]
         public int IdMedicament { get; set; }
         [Required]
-        [Key]
-        [ForeignKey("Prescription")]
         public int IdPrescription { get; set; }
         public int? Dose { get; set; }
         [Required]
