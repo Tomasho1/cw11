@@ -8,7 +8,7 @@ namespace cw11.Services
 {
     public interface IClinicDbService
     {
-        public Doctor GetDoctors();
+        public IEnumerable<Doctor> GetDoctors();
         public Doctor AddDoctor();
         public Doctor ModifyDoctor();
         public Doctor DeleteDoctor(int IdDoctor);

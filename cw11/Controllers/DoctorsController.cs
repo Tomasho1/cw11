@@ -20,6 +20,12 @@ namespace cw11.Controllers
             service = _service;
         }
 
+        [HttpGet] 
 
+        public IActionResult GetDoctors()
+        {
+            var res = service.GetDoctors();
+            return Ok(res);
+        }
     }
 }

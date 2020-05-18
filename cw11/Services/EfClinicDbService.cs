@@ -26,9 +26,10 @@ namespace cw11.Services
             throw new NotImplementedException();
         }
 
-        public Doctor GetDoctors()
+        public IEnumerable<Doctor> GetDoctors()
         {
-            throw new NotImplementedException();
+            var res = db.Doctors.ToList();
+            return res;
         }
 
         public Doctor ModifyDoctor()
