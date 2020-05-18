@@ -27,5 +27,30 @@ namespace cw11.Controllers
             var res = service.GetDoctors();
             return Ok(res);
         }
+
+        [HttpDelete]
+
+        public IActionResult DeleteDoctor(int IdDoctor)
+        {
+            var res = service.DeleteDoctor(IdDoctor);
+            return Ok(res);
+        }
+
+        [HttpPost]
+
+        public IActionResult AddDoctor (Doctor doctor)
+        {
+            var res = service.AddDoctor(doctor);
+            return Ok(res);
+        }
+
+        [HttpPut]
+        public IActionResult ModifyDoctor(Doctor doctor)
+        {
+            var res = service.ModifyDoctor(doctor);
+            return Ok(res);
+        }
+
     }
+
 }
